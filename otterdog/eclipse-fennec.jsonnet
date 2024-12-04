@@ -32,5 +32,11 @@ orgs.newOrg('eclipse-fennec') {
     newFennecRepo('.github') {
       description: "github organisation repository, defaults for all other Repositories",
     },
+    newFennecRepo('emf.osgi') {
+      description: "OSGi extension for EMF",
+    },
+    newFennecRepo('common.models') {
+      description: "Common EMF models (ecore models)",
+    },
   ],
 }
