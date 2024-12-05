@@ -27,7 +27,26 @@ orgs.newOrg('eclipse-fennec') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
-
+  secrets+: [        
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/modeling.fennec/gitlab.eclipse.org/api-token",
+    },
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/modeling.fennec/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/modeling.fennec/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/modeling.fennec/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('OSSRH_PASSWORD') {
+      value: "pass:bots/modeling.fennec/oss.sonatype.org/gh-token-password",
+    },
+    orgs.newOrgSecret('OSSRH_USERNAME') {
+      value: "pass:bots/modeling.fennec/oss.sonatype.org/gh-token-username",
+    },
+  ],
   _repositories+:: [
     newFennecRepo('.github') {
       description: "github organisation repository, defaults for all other Repositories",
