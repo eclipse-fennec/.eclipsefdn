@@ -19,7 +19,7 @@ local newFennecRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) 
   ],
 };
 
-orgs.newOrg('eclipse-fennec') {
+orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
   settings+: {
     description: "",
     name: "Eclipse Fennec project",
