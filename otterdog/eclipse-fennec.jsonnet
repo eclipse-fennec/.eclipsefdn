@@ -57,5 +57,8 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('common.models') {
       description: "Common EMF models (ecore models)",
     },
+    newFennecRepo('emf.editors') {
+      description: "Custom EMF Eclipse Editors",
+    }
   ],
 }
