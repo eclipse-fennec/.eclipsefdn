@@ -59,6 +59,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('emf.editors') {
       description: "Custom EMF Eclipse Editors",
+    },
+    newFennecRepo('fennec.bnd.libraries') {
+      description: "Fennec Workspace and Project Libraries",
     }
   ],
 }
