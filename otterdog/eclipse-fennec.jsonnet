@@ -40,11 +40,11 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     orgs.newOrgSecret('GPG_PRIVATE_KEY') {
       value: "pass:bots/modeling.fennec/gpg/secret-subkeys.asc",
     },
-    orgs.newOrgSecret('OSSRH_PASSWORD') {
-      value: "pass:bots/modeling.fennec/oss.sonatype.org/gh-token-password",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/modeling.fennec/central.sonatype.org/token-password",
     },
-    orgs.newOrgSecret('OSSRH_USERNAME') {
-      value: "pass:bots/modeling.fennec/oss.sonatype.org/gh-token-username",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/modeling.fennec/central.sonatype.org/token-username",
     },
   ],
   _repositories+:: [
