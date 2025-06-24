@@ -62,6 +62,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('fennec.bnd.libraries') {
       description: "Fennec Workspace and Project Libraries",
+      allow_merge_commit: true,
+      allow_rebase_merge: false,
+      allow_squash_merge: true,
     }
   ],
 }
