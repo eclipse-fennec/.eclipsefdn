@@ -48,6 +48,21 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('eclipse-fennec.github.io') {
+      allow_squash_merge: false,
+      allow_update_branch: false,
+      gh_pages_build_type: "workflow",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
     newFennecRepo('.github') {
       description: "github organisation repository, defaults for all other Repositories",
     },
