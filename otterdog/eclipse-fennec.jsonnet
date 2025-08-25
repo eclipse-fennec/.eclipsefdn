@@ -53,6 +53,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('eclipse-fennec.github.io') {
       description: "Fennec Documentation",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",  
     },
     newFennecRepo('emf.osgi') {
       description: "OSGi extension for EMF",
