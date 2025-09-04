@@ -27,7 +27,13 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
-  secrets+: [        
+  secrets+: [
+    orgs.newOrgSecret('DOCKER_USERNAME') {
+      value: "pass:bots/modeling.fennec/docker.com/username",
+    },
+    orgs.newOrgSecret('DOCKER_API_TOKEN') {
+      value: "pass:bots/modeling.fennec/docker.com/api-token",
+    },
     orgs.newOrgSecret('GITLAB_API_TOKEN') {
       value: "pass:bots/modeling.fennec/gitlab.eclipse.org/api-token",
     },
