@@ -65,6 +65,15 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
   _repositories+:: [
     newFennecRepo('.github') {
       description: "github organisation repository, defaults for all other Repositories",
+    },    
+    newFennecRepo('eclipse-fennec.github.io') {
+      description: "Fennec Documentation",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      environments: [
+        orgs.newEnvironment('github-pages'),
+      ],
     },
     newFennecRepo('emf.osgi') {
       description: "OSGi extension for EMF",
