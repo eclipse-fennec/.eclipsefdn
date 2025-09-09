@@ -52,6 +52,15 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
       value: "pass:bots/modeling.fennec/central.sonatype.org/token-username",
     },
+    orgs.newOrgSecret('SCP_KEY') {
+      value: "pass:bots/modeling.fennec/projects-storage.eclipse.org/id_ed25519",
+    },
+    orgs.newOrgSecret('SCP_PASSPHRASE') {
+      value: "pass:bots/modeling.fennec/projects-storage.eclipse.org/id_ed25519.passphrase",
+    },
+    orgs.newOrgSecret('SCP_USERNAME') {
+      value: "pass:bots/modeling.fennec/projects-storage.eclipse.org/username",
+    },
   ],
   _repositories+:: [
     newFennecRepo('.github') {
