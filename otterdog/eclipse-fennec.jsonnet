@@ -90,6 +90,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.editors') {
       description: "Custom EMF Eclipse Editors",
     },
+    newFennecRepo('emf.ts') {
+      description: "TypeScript based EMF",
+    },
     newFennecRepo('fennec.bnd.libraries') {
       description: "Fennec Workspace and Project Libraries",
       allow_merge_commit: true,
