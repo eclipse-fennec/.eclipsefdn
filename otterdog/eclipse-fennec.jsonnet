@@ -61,6 +61,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     orgs.newOrgSecret('SCP_USERNAME') {
       value: "pass:bots/modeling.fennec/projects-storage.eclipse.org/username",
     },
+    orgs.newOrgSecret('NPMJS_TOKEN') {
+      value: "pass:bots/modeling.fennec/npmjs.com/api-token",
+    },
   ],
   _repositories+:: [
     newFennecRepo('.github') {
