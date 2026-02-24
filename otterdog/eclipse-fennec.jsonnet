@@ -87,6 +87,12 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.codec') {
       description: "Jackson3 based EMF serializer/de-serialiazer",
     },
+    newFennecRepo('emf.m2x') {
+      description: "EMF Validation, Transformation and Generation",
+    },
+    newFennecRepo('model.metadata') {
+      description: "Common Model Metadata Framework",
+    },
     newFennecRepo('common.models') {
       description: "Common EMF models (ecore models)",
     },
