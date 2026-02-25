@@ -81,6 +81,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.osgi') {
       description: "OSGi extension for EMF",
     },
+    newFennecRepo('emf.codegen-maven') {
+      description: "Maven Codegen for EMF OSGi",
+    },
     newFennecRepo('emf.util') {
       description: "Utilities and commons for Fennec EMF OSGi",
     },
