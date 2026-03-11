@@ -93,6 +93,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.m2x') {
       description: "EMF Validation, Transformation and Generation",
     },
+    newFennecRepo('emf.persistence-jpa') {
+      description: "EMF JPA-like persistence using Eclipselink",
+    },
     newFennecRepo('model.metadata') {
       description: "Common Model Metadata Framework",
     },
