@@ -108,6 +108,24 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.ts') {
       description: "TypeScript based EMF",
     },
+    newFennecRepo('emf.ts.codegen') {
+      description: "TypeScript based EMF Codegen",
+    },
+    newFennecRepo('emf.ts.codec.jsonschema') {
+      description: "TypeScript based EMF codec jsonschema",
+    },
+    newFennecRepo('emf.ts.vue.registry') {
+      description: "TypeScript based EMF",
+    },
+    newFennecRepo('ocl.langium') {
+      description: "ocl langium grammar",
+    },
+    newFennecRepo('ocl.lsp.worker') {
+      description: "ocl langium worker",
+    },
+    newFennecRepo('ocl.model') {
+      description: "ocl model",
+    },
     newFennecRepo('fennec.bnd.libraries') {
       description: "Fennec Workspace and Project Libraries",
       allow_merge_commit: true,
