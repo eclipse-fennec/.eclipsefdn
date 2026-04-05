@@ -102,6 +102,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('common.models') {
       description: "Common EMF models (ecore models)",
     },
+    newFennecRepo('emf.osgi-mcp') {
+      description: "MCP OSGi Whiteboard using EMF Models as sturctured output",
+    },
     newFennecRepo('emf.editors') {
       description: "Custom EMF Eclipse Editors",
     },
