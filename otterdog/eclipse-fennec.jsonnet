@@ -129,6 +129,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('ocl.model') {
       description: "ocl model",
     },
+    newFennecRepo('camel') {
+      description: "EMF Camel Whiteboard",
+    },
     newFennecRepo('fennec.bnd.libraries') {
       description: "Fennec Workspace and Project Libraries",
       allow_merge_commit: true,
