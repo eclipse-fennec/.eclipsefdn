@@ -127,7 +127,10 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
       description: "ocl langium worker",
     },
     newFennecRepo('ocl.model') {
-      description: "ocl model",
+      description: "OCL Model",
+    },
+    newFennecRepo('ocl.engine') {
+      description: "OCL Engine",
     },
     newFennecRepo('camel') {
       description: "EMF Camel Whiteboard",
