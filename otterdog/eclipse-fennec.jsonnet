@@ -1,12 +1,12 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 local branchProtectionRule(branchName) = orgs.newBranchProtectionRule(branchName) {
-  required_approving_review_count: 0,
+  required_approving_review_count: 1,
   requires_linear_history: false,
   requires_strict_status_checks: true,
 };
 
-local newFennecRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) {
+local newFennecRepo(repoName, default_branch = 'snapshot') = orgs.newRepo(repoName) {
   allow_squash_merge: false,
   allow_update_branch: false,
   default_branch: default_branch,
@@ -15,7 +15,8 @@ local newFennecRepo(repoName, default_branch = 'main') = orgs.newRepo(repoName) 
   has_wiki: false,
   homepage: "https://projects.eclipse.org/projects/modeling.fennec",
   branch_protection_rules: [
-    branchProtectionRule($.default_branch) {},
+    branchProtectionRule('main') {},
+    branchProtectionRule('snapshot') {},
   ],
 };
 
@@ -66,10 +67,10 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
   ],
   _repositories+:: [
-    newFennecRepo('.github') {
+    newFennecRepo('.github', 'main') {
       description: "github organisation repository, defaults for all other Repositories",
-    },    
-    newFennecRepo('eclipse-fennec.github.io') {
+    },
+    newFennecRepo('eclipse-fennec.github.io', 'main') {
       description: "Fennec Documentation",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
