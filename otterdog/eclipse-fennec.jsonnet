@@ -142,6 +142,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('ocl.engine') {
       description: "OCL Engine",
     },
+    newFennecRepo('emf.py') {
+      description: "EMF implementation for Python",
+    },
     newFennecRepo('camel') {
       description: "EMF Camel Whiteboard",
     },
