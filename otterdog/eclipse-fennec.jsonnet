@@ -145,6 +145,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.py') {
       description: "EMF implementation for Python",
     },
+    newFennecRepo('emf.py.codegen') {
+      description: "EMF code generator for Python",
+    },
     newFennecRepo('camel') {
       description: "EMF Camel Whiteboard",
     },
