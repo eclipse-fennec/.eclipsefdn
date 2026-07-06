@@ -83,6 +83,13 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('emf.osgi') {
       description: "OSGi extension for EMF",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('emf.codegen-maven') {
       description: "Maven Codegen for EMF OSGi",
@@ -92,6 +99,13 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('emf.codec') {
       description: "Jackson3 based EMF serializer/de-serialiazer",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('emf.m2x') {
       description: "EMF Validation, Transformation and Generation",
@@ -105,18 +119,46 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     },
     newFennecRepo('emf.persistence-jpa') {
       description: "EMF JPA-like persistence using Eclipselink",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('emf.odata') {
       description: "EMF OData 4 Server",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('model.metadata') {
       description: "Common Model Metadata Framework",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('common.models') {
       description: "Common EMF models (ecore models)",
     },
     newFennecRepo('emf.osgi-mcp') {
       description: "MCP OSGi Whiteboard using EMF Models as sturctured output",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('emf.editors') {
       description: "Custom EMF Eclipse Editors",
@@ -160,17 +202,44 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
       allow_rebase_merge: false,
       allow_squash_merge: true,
     },
+    newFennecRepo('dcat.atlas') {
+      description: "Fennec DCAT-AP Open Data Portal",
+      allow_merge_commit: true,
+      allow_rebase_merge: false,
+      allow_squash_merge: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
+    },
     newFennecRepo('model.atlas') {
       description: "Fennec Model Atlas",
       allow_merge_commit: true,
       allow_rebase_merge: false,
       allow_squash_merge: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     },
     newFennecRepo('data.atlas') {
       description: "Fennec Data Atlas",
       allow_merge_commit: true,
       allow_rebase_merge: false,
       allow_squash_merge: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     }
   ],
 }
