@@ -106,6 +106,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.persistence-jpa') {
       description: "EMF JPA-like persistence using Eclipselink",
     },
+    newFennecRepo('emf.odata') {
+      description: "EMF OData 4 Server",
+    },
     newFennecRepo('model.metadata') {
       description: "Common Model Metadata Framework",
     },
