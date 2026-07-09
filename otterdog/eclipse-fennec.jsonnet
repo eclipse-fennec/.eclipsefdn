@@ -176,6 +176,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
     newFennecRepo('emf.ts') {
       description: "TypeScript based EMF",
     },
+    newFennecRepo('emf.ts.ui') {
+      description: "TypeScript UI based EMF editor model",
+    },
     newFennecRepo('emf.ts.codegen') {
       description: "TypeScript based EMF Codegen",
     },
