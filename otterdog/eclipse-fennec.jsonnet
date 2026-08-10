@@ -258,6 +258,19 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
         },
       ],
     },
+    newFennecRepo('event.atlas') {
+      description: "Fennec Event Atlas",
+      allow_merge_commit: true,
+      allow_rebase_merge: false,
+      allow_squash_merge: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
+    },
     newFennecRepo('data.atlas') {
       description: "Fennec Data Atlas",
       allow_merge_commit: true,
