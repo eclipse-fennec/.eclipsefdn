@@ -255,6 +255,19 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
         },
       ],
     },
+    newFennecRepo('dcat.atlas.ui') {
+      description: "Fennec DCAT-Atlas UI",
+      allow_merge_commit: true,
+      allow_rebase_merge: false,
+      allow_squash_merge: true,
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
+    },
     newFennecRepo('model.atlas') {
       description: "Fennec Model Atlas",
       allow_merge_commit: true,
