@@ -316,6 +316,12 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
           branch_policies+: ["main","snapshot"],
         },
       ],
+    },
+    newFennecRepo('qvt.langium') {
+      description: "Language Server for QVT",
+      allow_merge_commit: false,
+      allow_rebase_merge: true,
+      allow_squash_merge: true,
     }
   ],
 }
