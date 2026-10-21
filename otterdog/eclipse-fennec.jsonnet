@@ -167,6 +167,9 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
         },
       ],
     },
+    newFennecRepo('emf.odata.ui') {
+      description: "TypeScript OData UI",
+    },
     newFennecRepo('model.metadata') {
       description: "Common Model Metadata Framework",
       gh_pages_build_type: "workflow",
