@@ -190,6 +190,16 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
         },
       ],
     },
+    newFennecRepo('fennec.models') {
+      description: "Fennec related EMF models (ecore models)",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
+    },
     newFennecRepo('emf.osgi-mcp') {
       description: "MCP OSGi Whiteboard using EMF Models as sturctured output",
       gh_pages_build_type: "workflow",
