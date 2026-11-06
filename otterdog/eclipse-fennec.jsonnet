@@ -111,6 +111,16 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
         },
       ],
     },
+    newFennecRepo('emf.streaming') {
+      description: "EMF based streaming API and framework",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
+    },
     newFennecRepo('emf.codegen-maven') {
       description: "Maven Codegen for EMF OSGi",
     },
