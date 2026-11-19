@@ -345,6 +345,16 @@ orgs.newOrg('modeling.fennec', 'eclipse-fennec') {
       allow_merge_commit: false,
       allow_rebase_merge: true,
       allow_squash_merge: true,
+    },
+    newFennecRepo('emf.jakarta.rest') {
+      description: "Dynamic Jakarta REST based on Dynamic EMF Models",
+      gh_pages_build_type: "workflow",
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          deployment_branch_policy: "selected",
+          branch_policies+: ["main","snapshot"],
+        },
+      ],
     }
   ],
 }
